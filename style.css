@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+.logo {
+    display: block;
+    margin: 0 auto 30px;
+    max-width: 200px; /* Adjust as needed */
+}
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between columns */
+}
+.form-group {
+    flex: 1 1 calc(50% - 20px); /* Two columns layout */
+    min-width: 300px; /* Minimum width for responsiveness */
+}
+.trip-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between inputs in trip details */
+    margin-top: 20px; /* Space above trip details */
+}
+.trip-input {
+    flex: 1; /* Flex to evenly distribute space */
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+input, select, button {
+    margin-top: 5px;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+input:focus, select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+input:invalid {
+    border-color: red;
+}
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+button:hover {
+    background-color: #2980b9;
+}
+#resultado {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+li {
+    margin-bottom: 10px;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+}
+@media (max-width: 600px) {
+    .form-group {
+        flex: 1 1 100%; /* Stack in one column on smaller screens */
+    }
+    .trip-details {
+        flex-direction: column; /* Stack inputs on smaller screens */
+    }
+}
